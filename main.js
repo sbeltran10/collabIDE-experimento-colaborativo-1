@@ -36,7 +36,7 @@ console.log(grafo);
 // PARTE 1
 function agregarVertice(){
 
-	var verticeNuevo = [];	
+	var verticeNuevo = new Array();	
 	grafo.push(verticeNuevo);
 }
 
@@ -97,10 +97,33 @@ function darGrado(vertice){
 }
 
 caminoBFS(verticeOrigen){
-	var CaminoVertice;
 
+	var CaminoVertice;
+	var peso = 0;
+	var longitud = 0;
 	var vertOrigen = grafo[verticeOrigen];
-	var queue = vertOrigen
+	var queue = new Array();
+
+	var i;
+	for ( i = 0; i < vertOrigen.lenght; i++) {
+		queue.push(vertOrigen[i]);
+	}
+
+	var ultimoV;
+	while(queue.lenght != 0)
+	{
+		var vertiveVariable = queue.shift();
+
+		var j;
+		for(j =0, j < vertiveVariable.lenght; j++)
+		{
+			var otroVertice = vertiveVariable[j];
+			peso = peso + otroVertice.peso;
+			longitud ++;
+
+			queue.push(otroVertice);
+		}
+	}
 }
 // PARTE 2
 var grafoAlternativo;
