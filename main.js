@@ -146,18 +146,22 @@ function altCaminoMasCortoDijkstra(verticeOrigen, verticeDestino){
 
 function caminoDFS(verticeOrigen)
 {
+	var marcados;
+	var arcos;
+	
 
 }
 
-function dfs(v, marcados)
+function dfs(v, marcados, arcos)
 {
 	marcados[v] = true;
 	for(i = 0; i < grafo[v].lenght; i++)
 	{
-		if(!marcados[(grafo[v])[i].verticeAdyacente])])
+		var actual = (grafo[v])[i].verticeAdyacente;
+		if(!marcados[actual])
 		{
-			
-
+			arcos[actual] = v;
+			dfs(w, marcados, arcos);
 		}
 	}
 
