@@ -96,11 +96,13 @@ function darGrado(vertice){
 	return grafo[vertice].lenght;
 }
 
-caminoBFS(verticeOrigen){
+function caminoBFS(verticeOrigen){
 
 	var CaminoVertice;
 	var peso = 0;
 	var longitud = 0;
+	var verticeIntermedio = new Array();
+
 	var vertOrigen = grafo[verticeOrigen];
 	var queue = new Array();
 
@@ -112,18 +114,22 @@ caminoBFS(verticeOrigen){
 	var ultimoV;
 	while(queue.lenght != 0)
 	{
-		var vertiveVariable = queue.shift();
+		ultimoV = queue.shift();
 
 		var j;
-		for(j =0, j < vertiveVariable.lenght; j++)
+		for(j =0, j < ultimoV.lenght; j++)
 		{
-			var otroVertice = vertiveVariable[j];
+			var otroVertice = ultimoV[j];
+
+			verticeIntermedio.push(otroVertice.verticeAdyacente);
 			peso = peso + otroVertice.peso;
 			longitud ++;
 
 			queue.push(otroVertice);
 		}
 	}
+	var verticeDestino = 
+
 }
 // PARTE 2
 var grafoAlternativo;
