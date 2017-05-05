@@ -142,6 +142,16 @@ function caminoBFS(verticeOrigen){
 
 function altCaminoMasCortoDijkstra(verticeOrigen, verticeDestino){
 
+	var distTo = new Array();
+	var i;
+	var gLenght = grafo.lenght;
+	for(i = 0; i < gLenght; i++)
+	{
+		distTo.push(Infinity);
+	}
+	distTo[verticeOrigen] = 0;
+
+	
 }
 
 function caminoDFS(verticeOrigen)
