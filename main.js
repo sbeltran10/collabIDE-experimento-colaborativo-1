@@ -36,7 +36,7 @@ console.log(grafo);
 // PARTE 1
 function agregarVertice(){
 
-	var verticeOri = grafo[verticeOrigen];
+	var verticeNuevo = [];	
 	grafo.push(verticeNuevo);
 }
 
@@ -51,14 +51,25 @@ function darNumeroArcos( )
 	return count;
 }
 
-function agregarArco(verticeOrigen, verticeDestino, peso)
+function agregarArco(verticeOrigen, verticeDestino, pesoP)
 {
-	
+	var verticeOri = grafo[verticeOrigen];	
+	var yaExiste = false;
 	for(i = 0; i < verticeOri.lenght; i++)
 	{
-		
+		if(verticeOri[i].verticeAdyacente == verticeDestino)
+		{
+			verticeOri[i].peso = pesoP;
+			yaExiste = true;
+			break;
+		}
 	}
-	var verticeNuevo = [];
+	if(!yaExiste)
+	{
+		var arcoNuevo = { verticeAdyacente = verticeDestino, peso = pesoP };
+		verticeOri.push(arcoNuevo);
+	}
+	
 	
 }
 
