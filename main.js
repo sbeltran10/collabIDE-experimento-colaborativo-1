@@ -66,7 +66,7 @@ function agregarArco(verticeOrigen, verticeDestino, pesoP)
 	}
 	if(!yaExiste)
 	{
-		var arcoNuevo = { verticeAdyacente = verticeDestino, peso = pesoP };
+		var arcoNuevo = { verticeAdyacente: verticeDestino, peso: pesoP };
 		verticeOri.push(arcoNuevo);
 	}
 	
