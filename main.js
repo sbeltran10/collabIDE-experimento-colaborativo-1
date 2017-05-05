@@ -98,10 +98,12 @@ function darGrado(vertice){
 
 function caminoBFS(verticeOrigen){
 
-	var CaminoVertice;
-	var peso = 0;
-	var longitud = 0;
-	var verticeIntermedio = new Array();
+	var CaminoVertice = {};
+	
+	var verticeDestinoR;
+	var verticeIntermedioR = new Array();
+	var pesoR = 0;
+	var longitudR = 0;
 
 	var vertOrigen = grafo[verticeOrigen];
 	var queue = new Array();
@@ -112,6 +114,7 @@ function caminoBFS(verticeOrigen){
 	}
 
 	var ultimoV;
+	
 	while(queue.lenght != 0)
 	{
 		ultimoV = queue.shift();
@@ -121,14 +124,23 @@ function caminoBFS(verticeOrigen){
 		{
 			var otroVertice = ultimoV[j];
 
-			verticeIntermedio.push(otroVertice.verticeAdyacente);
-			peso = peso + otroVertice.peso;
-			longitud ++;
+			verticeDestinoR = otroVertice.verticeAdyacente;
+			verticeIntermedioR.push(otroVertice.verticeAdyacente);
+			pesoR = pesoR + otroVertice.peso;
+			longitudR ++;
 
 			queue.push(otroVertice);
 		}
 	}
-	var verticeDestino = 
+
+	CaminoVertice.verticeDestino = verticeDestinoR;
+	CaminoVertice.verticeIntermedio = verticeIntermedioR;
+	CaminoVertice.peso = pesoR;
+	CaminoVertice.longitud = longitudR;
+
+}
+
+function altCaminoMasCortoDijkstra(verticeOrigen, verticeDestino){
 
 }
 // PARTE 2
