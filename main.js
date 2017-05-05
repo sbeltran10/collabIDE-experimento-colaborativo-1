@@ -131,6 +131,25 @@ function caminoBFS(verticeOrigen){
 	var verticeDestino = 
 
 }
+
+function caminoDFS(verticeOrigen)
+{
+
+}
+
+function dfs(v, marcados)
+{
+	marcados[v] = true;
+	for(i = 0; i < grafo[v].lenght; i++)
+	{
+		if(!marcados[(grafo[v])[i].verticeAdyacente])])
+		{
+			
+
+		}
+	}
+
+}
 // PARTE 2
 var grafoAlternativo;
 
