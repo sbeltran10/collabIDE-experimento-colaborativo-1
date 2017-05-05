@@ -34,6 +34,7 @@ grafo.push(vertice5);
 console.log(grafo);
 
 // PARTE 1
+function agregarVertice(){
 
 function darNumeroArcos( )
 {
@@ -53,7 +54,36 @@ function agregarArco(verticeOrigen, verticeDestino, peso)
 	{
 		
 	}
+	var verticeNuevo = [];
+	grafo.push(verticeNuevo);
+}
 
+function darPesoArco(verticeOrigen, verticeDestino){
+	var vOrigen = grafo[verticeOrigen];
+	var vLenght = vOrigen.lenght;
+	var i;
+	var respuesta = -1;
+
+	for(i = 0; i < vLenght; i++)
+	{
+
+		if(vOrigen[i].verticeAdyacente == verticeDestino)
+		{
+			respuesta = vOrigen[i].peso;
+		}
+	}
+
+	return respuesta;
+}
+
+function darGrado(vertice){
+
+	return grafo[vertice].lenght;
+}
+
+caminoBFS(verticeOrigen){
+
+	var vertOrigen
 }
 // PARTE 2
 var grafoAlternativo;
