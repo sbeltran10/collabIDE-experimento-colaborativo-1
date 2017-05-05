@@ -35,7 +35,26 @@ console.log(grafo);
 
 // PARTE 1
 
+function darNumeroArcos( )
+{
+	var count = 0;
+	for(i = 0; i < grafo.lenght; i++)
+	{
+		var vertice = grafo[i];
+		count += vertice.lenght;
+	}
+	return count;
+}
 
+function agregarArco(verticeOrigen, verticeDestino, peso)
+{
+	var verticeOri = grafo[verticeOrigen];
+	for(i = 0; i < verticeOri.lenght; i++)
+	{
+		
+	}
+
+}
 // PARTE 2
 var grafoAlternativo;
 
