@@ -36,6 +36,10 @@ console.log(grafo);
 // PARTE 1
 function agregarVertice(){
 
+	var verticeOri = grafo[verticeOrigen];
+	grafo.push(verticeNuevo);
+}
+
 function darNumeroArcos( )
 {
 	var count = 0;
@@ -49,13 +53,13 @@ function darNumeroArcos( )
 
 function agregarArco(verticeOrigen, verticeDestino, peso)
 {
-	var verticeOri = grafo[verticeOrigen];
+	
 	for(i = 0; i < verticeOri.lenght; i++)
 	{
 		
 	}
 	var verticeNuevo = [];
-	grafo.push(verticeNuevo);
+	
 }
 
 function darPesoArco(verticeOrigen, verticeDestino){
@@ -82,8 +86,10 @@ function darGrado(vertice){
 }
 
 caminoBFS(verticeOrigen){
+	var CaminoVertice;
 
-	var vertOrigen
+	var vertOrigen = grafo[verticeOrigen];
+	var queue = vertOrigen
 }
 // PARTE 2
 var grafoAlternativo;
